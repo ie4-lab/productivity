@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: service-c
+  labels:
+    app: service-c
+spec:
+  containers:
+  - name: service-c
+    image: 282641971624.dkr.ecr.ap-northeast-1.amazonaws.com/take:service-c
+    ports:
+      - containerPort: 8082
+  imagePullSecrets:
+    - name: ecr-registry-secret
